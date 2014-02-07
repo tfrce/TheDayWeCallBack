@@ -19,6 +19,12 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <receiver  android:process=":remote" android:name="Alarm"></receiver>
+        <receiver android:name=".AutoStart">
+          <intent-filter>
+            <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+          </intent-filter>
+        </receiver>
         <activity
             android:name="com.taskforce.thedaywefightback.MainActivity"
             android:label="@string/app_name" >

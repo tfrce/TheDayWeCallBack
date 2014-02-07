@@ -82,7 +82,7 @@ public class MainActivity extends Activity {
 	            String istheday = jsonObj.getString("thedaywefightback");
 
 
-	            if (istheday=="true"){
+	            if (istheday=="false"){
 
 	            	Counttext.setText("CALL CONGRESS!"); 
 	    	    	hideText.setVisibility(View.GONE);
