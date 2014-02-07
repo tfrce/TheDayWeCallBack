@@ -1,0 +1,133 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/header"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/Feb"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+           
+            android:gravity="center_horizontal"
+            android:text="FEBRUARY 11TH 2014 IS"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.27"
+            android:gravity="center"
+            android:text="The Day We Fight Back"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#4391B3" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.27"
+        android:gravity="center_horizontal"
+        android:text="AGAINST MASS SURVEILLANCE"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/countDownText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_weight="0.27"
+        android:gravity="center_horizontal"
+        android:text="WATCH THIS SPACE"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/hideThisTextOnDay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/countDownText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:gravity="center_horizontal"
+        android:text="On February 11th, extra features will be unlocked in this app that allow you to take part in the day of action."
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/callButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="Call" />
+
+    <TextView
+        android:id="@+id/webLink"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.27"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="www.thedatwefightback.org"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#4391B3" />
+
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:gravity="center_horizontal"
+        android:text="Once you click call(free of charge) we will ask for your ZIP code, then connect you to your legislators. After each call, press the star key to connect to your next representative.
+
+If the call doesn&apos;t arrive within 10 seconds, click here to try again or dial (202) 999-3996.
+
+WHAT TO SAY
+I am one of your constituents, and I’m calling to ask you to take action against mass surveillance by the NSA.
+
+I’d like Senator/Representative ____ to support and co-sponsor the USA Freedom Act. I would also like you to oppose S. 1631, the so-called FISA Improvements Act. Moreover, I’d like you to work to prevent the NSA from undermining encryption standards and to protect the privacy rights of non-Americans."
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:background="#ffffff"
+        android:textColor="#000000"
+         />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="Help spread the word."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/shareButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="SHARE" />
+
+    <TextView
+        android:id="@+id/phoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff" />
+
+	</LinearLayout>
+</ScrollView>
