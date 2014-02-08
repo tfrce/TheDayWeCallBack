@@ -77,17 +77,6 @@
         android:text="Call" />
 
     <TextView
-        android:id="@+id/webLink"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.27"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="www.thedatwefightback.org"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#4391B3" />
-
-    <TextView
         android:id="@+id/TextView03"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -107,6 +96,27 @@ I’d like Senator/Representative ____ to support and co-sponsor the USA Freedom
          />
 
     <TextView
+        android:id="@+id/webLink"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.27"
+        android:gravity="center"
+        android:text="www.thedatwefightback.org"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#4391B3" />
+
+    <TextView
+        android:id="@+id/TextView04"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="or"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffffff" />
+
+    <TextView
         android:id="@+id/TextView02"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -118,6 +128,7 @@ I’d like Senator/Representative ____ to support and co-sponsor the USA Freedom
 
     <Button
         android:id="@+id/shareButton"
+        android:layout_marginTop="20dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="SHARE" />
