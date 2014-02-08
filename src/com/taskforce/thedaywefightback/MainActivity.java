@@ -42,7 +42,7 @@ public class MainActivity extends Activity {
         
         //weblink
         TextView mTextSample = (TextView) findViewById(R.id.webLink);
-        String text = "Visit thedaywefightback.org";
+        String text = "thedaywefightback.org";
         mTextSample.setText(text);
         Pattern pattern = Pattern.compile("thedaywefightback.org");
         Linkify.addLinks(mTextSample, pattern, "https://");

@@ -77,17 +77,32 @@
         android:text="Call" />
 
     <TextView
-        android:id="@+id/TextView03"
+        android:id="@+id/TextView05"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:gravity="center_horizontal"
-        android:text="Once you click call(free of charge) we will ask for your ZIP code, then connect you to your legislators. After each call, press the star key to connect to your next representative.
+        android:text="Once you click call(free of charge) we will ask for your ZIP code, then connect you to your legislators. After each call, press the star key to connect to your next representative.\n\n"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ffffff" />
 
-If the call doesn&apos;t arrive within 10 seconds, click here to try again or dial (202) 999-3996.
+    <TextView
+        android:id="@+id/TextView06"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.27"
+        android:gravity="center"
+        android:text="WHAT TO SAY"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#4391B3" />
 
-WHAT TO SAY
-I am one of your constituents, and I’m calling to ask you to take action against mass surveillance by the NSA.
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:padding="15dip"
+        android:text="I am one of your constituents, and I’m calling to ask you to take action against mass surveillance by the NSA.
 
 I’d like Senator/Representative ____ to support and co-sponsor the USA Freedom Act. I would also like you to oppose S. 1631, the so-called FISA Improvements Act. Moreover, I’d like you to work to prevent the NSA from undermining encryption standards and to protect the privacy rights of non-Americans."
         android:textAppearance="?android:attr/textAppearanceSmall"
@@ -96,35 +111,15 @@ I’d like Senator/Representative ____ to support and co-sponsor the USA Freedom
          />
 
     <TextView
-        android:id="@+id/webLink"
+        android:id="@+id/TextView02"
+        android:layout_marginTop="15dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
         android:layout_weight="0.27"
         android:gravity="center"
-        android:text="www.thedatwefightback.org"
+        android:text="Help spread the word."
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#4391B3" />
-
-    <TextView
-        android:id="@+id/TextView04"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center_horizontal"
-        android:text="or"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#ffffff" />
-
-    <TextView
-        android:id="@+id/TextView02"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center_horizontal"
-        android:text="Help spread the word."
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#ffffff" />
 
     <Button
         android:id="@+id/shareButton"
@@ -132,6 +127,17 @@ I’d like Senator/Representative ____ to support and co-sponsor the USA Freedom
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="SHARE" />
+
+    <TextView
+        android:id="@+id/webLink"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_weight="0.27"
+        android:gravity="center"
+        android:text="thedatwefightback.org"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#4391B3" />
 
     <TextView
         android:id="@+id/phoneNumber"
