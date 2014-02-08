@@ -29,7 +29,6 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,30 +38,30 @@ public class MainActivity extends Activity {
         Alarm alarm = new Alarm();
         Context contextX = this.getApplicationContext();
         alarm.SetAlarm(contextX);
-       //end set alarm
+        //end set alarm
+        
+        //weblink
+        TextView mTextSample = (TextView) findViewById(R.id.webLink);
+        String text = "Visit thedaywefightback.org";
+        mTextSample.setText(text);
+        Pattern pattern = Pattern.compile("thedaywefightback.org");
+        Linkify.addLinks(mTextSample, pattern, "https://");
+        //end weblink
       
        TextView phoneNumber = (TextView) findViewById(R.id.phoneNumber);
-       Button share_btn = (Button) findViewById(R.id.shareButton);
        
-       //weblink
-       TextView mTextSample = (TextView) findViewById(R.id.webLink);
-       String text = "Visit thedaywefightback.org";
-       mTextSample.setText(text);
-       Pattern pattern = Pattern.compile("thedaywefightback.org");
-       Linkify.addLinks(mTextSample, pattern, "https://");
-       //end weblink
+       Button share_btn = (Button) findViewById(R.id.shareButton);
 
        share_btn.setOnClickListener(new View.OnClickListener() {
            public void onClick(View v) {
         	   Intent sendIntent = new Intent();
         	   sendIntent.setAction(Intent.ACTION_SEND);
         	   sendIntent.putExtra(Intent.EXTRA_TEXT,
-        	       "Hey check out my app!");
+        	       "Thousands of websites are planning a massive online protest against surveillance on February 11th - http://thedaywefightback.org");
         	   sendIntent.setType("text/plain");
         	   startActivity(sendIntent);
            }
        });
-       
 
   	    View btn = findViewById(R.id.callButton);
   	    btn.setVisibility(View.GONE);
@@ -80,7 +79,6 @@ public class MainActivity extends Activity {
 				String responseText = EntityUtils.toString(entity);
 	            JSONObject jsonObj = new JSONObject(responseText);
 	            String istheday = jsonObj.getString("thedaywefightback");
-
 
 	            if (istheday=="true"){
 
@@ -108,7 +106,7 @@ public class MainActivity extends Activity {
 			}
 
 	    Button mButton = (Button)findViewById(R.id.callButton);
-	    final String mEdit = "0402928357"; ///some number - old version
+	  
 
 	    mButton.setOnClickListener(
 	        new View.OnClickListener()
@@ -118,35 +116,9 @@ public class MainActivity extends Activity {
 
 	            	//call action
 	            	Intent callIntent = new Intent(Intent.ACTION_CALL);
-	                callIntent.setData(Uri.parse("tel:0402928357"));
+	                callIntent.setData(Uri.parse("tel:345678987654"));
 	                startActivity(callIntent);
 	            	//end call action
-
-	                HttpClient client = new DefaultHttpClient();
-	                HttpGet request = new HttpGet();
-	                try {
-	        			request.setURI(new URI("http://call-congress.taskforce.is/create?campaignId=restrict-nsa&userPhone="+mEdit));
-	        	        HttpResponse response = client.execute(request);
-
-						HttpEntity entity = response.getEntity();
-
-						String responseText = EntityUtils.toString(entity);
-	        	        JSONObject jsonObj = new JSONObject(responseText);
-
-
-	        		} catch (URISyntaxException e) {
-	        			// TODO Auto-generated catch block
-	        			e.printStackTrace();
-	        		} catch (ClientProtocolException e) {
-	        			// TODO Auto-generated catch block
-	        			e.printStackTrace();
-	        		} catch (IOException e) {
-	        			// TODO Auto-generated catch block
-	        			e.printStackTrace();
-	        		} catch (JSONException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
 
 	            }
 	        });   

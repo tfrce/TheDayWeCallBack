@@ -47,13 +47,13 @@ public class Alarm extends BroadcastReceiver
  	            String istheday = jsonObj.getString("thedaywefightback");
  	        
  	            //Toast.makeText(context, istheday, Toast.LENGTH_LONG).show(); // For example
- 	            if (istheday=="stop"){
- 	            	CancelAlarm(context);
- 	            }
+ 	            
+ 	            if (istheday == "-"){
+ 	            	CancelAlarm(context);  
+	            }
                 if (istheday=="true"){
  	            	showNotification(context);  
- 	            }
- 	                 	            
+ 	            }      
              
  		} catch (URISyntaxException e) {
  			// TODO Auto-generated catch block
@@ -77,7 +77,7 @@ public class Alarm extends BroadcastReceiver
      AlarmManager am=(AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
      Intent i = new Intent(context, Alarm.class);
      PendingIntent pi = PendingIntent.getBroadcast(context, 0, i, 0);
-     am.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 10000, pi); // Millisec * Second * Minute
+     am.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 21500000, pi); // 6hours in milliseconds
  }
 
  public void CancelAlarm(Context context)
@@ -106,6 +106,5 @@ public class Alarm extends BroadcastReceiver
      mNotificationManager.notify(1, mBuilder.build());
 
  }
-
 
 }
