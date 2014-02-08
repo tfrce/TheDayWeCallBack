@@ -99,7 +99,7 @@ I’d like Senator/Representative ____ to support and co-sponsor the USA Freedom
         android:id="@+id/webLink"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:layout_weight="0.27"
         android:gravity="center"
         android:text="www.thedatwefightback.org"

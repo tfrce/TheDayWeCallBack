@@ -78,26 +78,21 @@ public class MainActivity extends Activity {
 				HttpEntity entity = response.getEntity();				
 				String responseText = EntityUtils.toString(entity);
 	            JSONObject jsonObj = new JSONObject(responseText);
-	            String istheday = jsonObj.getString("thedaywefightback");
 	            String days = jsonObj.getString("days");
+	            
+	            if (days == "0"){
+	            	Counttext.setText("CALL CONGRESS!"); 
+	    	    	hideText.setVisibility(View.GONE);
+	    	    	btn.setVisibility(View.VISIBLE);
+	    	    	btn.getBackground().setColorFilter(new LightingColorFilter(0xFFFFFFFF, 0xFF00FF00));
+	            }
 	            
 	            if (days == "1"){
 	            	Counttext.setText("TOMORROW!");
 	            } else {
 	            	Counttext.setText(days+" DAYS LEFT");
 	            }
-	             
-	            
-	            if (istheday=="true"){
-
-	            	Counttext.setText("CALL CONGRESS!"); 
-	    	    	hideText.setVisibility(View.GONE);
-	    	    	//activate call button
-	    	    	//btn.setEnabled(true);
-	    	    	btn.setVisibility(View.VISIBLE);
-	    	    	btn.getBackground().setColorFilter(new LightingColorFilter(0xFFFFFFFF, 0xFF00FF00));
-	    	    	//enter_number.setVisibility(View.VISIBLE);
-	            }   	            
+	              	            
             
 		} catch (URISyntaxException e) {
 			// TODO Auto-generated catch block
@@ -114,20 +109,17 @@ public class MainActivity extends Activity {
 			}
 
 	    Button mButton = (Button)findViewById(R.id.callButton);
-	  
 
 	    mButton.setOnClickListener(
 	        new View.OnClickListener()
 	        {
 	            public void onClick(View view)
 	            {
-
 	            	//call action
 	            	Intent callIntent = new Intent(Intent.ACTION_CALL);
 	                callIntent.setData(Uri.parse("tel:345678987654"));
 	                startActivity(callIntent);
 	            	//end call action
-
 	            }
 	        });   
     }

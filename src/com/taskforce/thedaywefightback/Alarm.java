@@ -26,8 +26,7 @@ import android.support.v4.app.NotificationCompat;
 import android.widget.Toast;
 
 public class Alarm extends BroadcastReceiver 
-{    
-   
+{      
      @Override
      public void onReceive(Context context, Intent intent) 
      {   
@@ -44,16 +43,15 @@ public class Alarm extends BroadcastReceiver
 				HttpEntity entity = response.getEntity();				
 				String responseText = EntityUtils.toString(entity);
  	            JSONObject jsonObj = new JSONObject(responseText);
- 	            String istheday = jsonObj.getString("thedaywefightback");
+ 	            String days = jsonObj.getString("days");
  	        
- 	            //Toast.makeText(context, istheday, Toast.LENGTH_LONG).show(); // For example
- 	            
- 	            if (istheday == "-"){
- 	            	CancelAlarm(context);  
-	            }
-                if (istheday=="true"){
+                if (days=="0"){
  	            	showNotification(context);  
- 	            }      
+ 	            }    
+                
+                if (days.substring(0,1)=="-"){
+                	CancelAlarm(context);
+                }
              
  		} catch (URISyntaxException e) {
  			// TODO Auto-generated catch block
@@ -77,7 +75,7 @@ public class Alarm extends BroadcastReceiver
      AlarmManager am=(AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
      Intent i = new Intent(context, Alarm.class);
      PendingIntent pi = PendingIntent.getBroadcast(context, 0, i, 0);
-     am.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 21500000, pi); // 6hours in milliseconds
+     am.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 20000000, pi); // 5.555 hours in milliseconds
  }
 
  public void CancelAlarm(Context context)
