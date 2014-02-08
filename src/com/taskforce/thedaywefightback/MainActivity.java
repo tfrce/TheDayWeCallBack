@@ -79,7 +79,9 @@ public class MainActivity extends Activity {
 				String responseText = EntityUtils.toString(entity);
 	            JSONObject jsonObj = new JSONObject(responseText);
 	            String istheday = jsonObj.getString("thedaywefightback");
-
+	            String days = jsonObj.getString("days");
+	            Counttext.setText(days+" DAYS LEFT"); 
+	            
 	            if (istheday=="true"){
 
 	            	Counttext.setText("CALL CONGRESS!"); 
